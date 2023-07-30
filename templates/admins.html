@@ -1,0 +1,60 @@
+ {% extends "base.html" %}
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='page_admin.css') }}"/>
+ {% endblock %}
+
+{% block content %}
+<body>
+<nav>
+    <h1>welcome {{x}}</h1>
+
+</nav>
+<div class="button-group">
+
+    <a href="/inquery">
+        <button class="button">
+            Search book
+        </button>
+    </a>
+    <a href="/checkout">
+        <button class="button">
+            Checkout book
+        </button>
+    </a>
+    <a href="/return_book">
+        <button class="button">
+            Return book
+        </button>
+    </a>
+    <a href="/all_members">
+        <button class="button">
+            All members
+        </button>
+    </a>
+    <a href="/all_books">
+        <button class="button">
+            All books
+        </button>
+    </a>
+    <a href="/Borrower_books">
+        <button class="button">
+            Borrower books
+        </button>
+    </a>
+    <a href="/Available_books">
+        <button class="button">
+            Available books
+        </button>
+    </a>
+    <a href="/The_most_borrowed_book">
+        <button class="button">
+            The most borrowed book
+        </button>
+    </a>
+    <a href="/The_least_borrowed_book">
+        <button class="button">
+            The least borrowed book
+        </button>
+    </a>
+</div>
+{% endblock %}

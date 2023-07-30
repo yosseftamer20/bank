@@ -1,0 +1,30 @@
+{% extends "constant.html" %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static',filename='amount.css') }}"/>
+{% endblock %}
+{% block content %}
+
+<body>
+
+<div class="notification">
+  <p>{{results}}</p>
+</div>
+
+<form>
+    {% if y==True %}
+    <label for="email">beneficiary email:</label>
+    <input type="text" id="email" name="email">
+    {% endif %}
+    <label for="amount">amount:</label>
+    <input type="text" id="amount" name="amount">
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+    <button>
+        <a href="/" title="go to home page">
+            Go to home page
+        </a>
+    </button>
+
+</form>
+{% endblock %}

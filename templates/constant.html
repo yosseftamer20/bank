@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='constant.css') }}"/>
+    {%block css%}
+    {% endblock %}
+</head>
+<body>
+
+<div style="display: flex; justify-content: space-between;">
+    <div style="text-align: left;">Library Management System</div>
+    <div style="text-align: right;">{{session['name']}}
+        <button class="button1">
+            <a href="/logout">logout</a>
+        </button>
+    </div>
+
+</div>
+<hr>
+{%block content%}
+{% endblock %}
+<br>
+<hr>
+<footer>
+    <p>Created by Yousef</p>
+</footer>
+</body>
+</html>

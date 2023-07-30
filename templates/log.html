@@ -1,0 +1,17 @@
+         {% extends "constant.html" %}
+{% block css %}
+            <link rel="stylesheet" href= "{{ url_for('static',filename='log.css') }}"/>
+{% endblock %}
+{% block content %}
+
+<body>
+<h1>Login or Create an Account:</h1>
+<form >
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <input type="submit" value="Login" class="button" id="login">
+    <a href="/create_account" class="button">Create account</a>
+</form>
+{% endblock %}

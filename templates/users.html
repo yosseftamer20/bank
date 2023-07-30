@@ -1,0 +1,35 @@
+{% extends "constant.html" %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static',filename='users.css') }}"/>
+{% endblock %}
+
+
+{% block content %}
+<body>
+<h1>welcome {{x}}</h1>
+
+<div class="button-group">
+    <a href="/inquery">
+
+        <button class="button">
+            inquery
+        </button>
+    </a>
+    <a href="/deposit">
+        <button class="button">
+            deposit
+        </button>
+    </a>
+    <a href="/withdraw">
+        <button class="button">
+            withdraw
+        </button>
+    </a>
+    <a href="/transfer">
+        <button class="button">
+            transfer
+        </button>
+    </a>
+
+</div>
+{% endblock %}

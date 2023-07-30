@@ -1,0 +1,38 @@
+      {% extends "constant.html" %}
+{% block css %}
+            <link rel="stylesheet" href= "{{ url_for('static',filename='inquery.css') }}"/>
+
+{% endblock %}
+
+
+{% block content %}
+
+<body>
+<h1>
+    data fo {{x}}
+</h1>
+
+<table border="1px">
+    <tr>
+        {% for n in results["headers"] %}
+        <th>{{n}}</th>
+        {% endfor %}
+    </tr>
+    {% for i in results["result"] %}
+
+    <tr>
+        {% for x in i %}
+        <td>
+            {{ x}}
+        </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+<br>
+<button>
+    <a href="/" title="go to home page" it>Go to home page</a>
+</button>
+{% endblock %}
+
+
